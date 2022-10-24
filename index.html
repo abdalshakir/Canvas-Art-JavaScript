@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: #262626;
+            color: #ffffff;
+            font-family: sans-serif;
+        }
+
+        .theme-buttons-container {
+            display: flex;
+        }
+
+        button[id^=button] {
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        #canvas {
+            cursor: pointer;
+        }
+
+        #guide {
+            display: grid;
+            pointer-events: none;
+            position: absolute;
+            border: 1px solid rgba(170, 132, 132, 0.1);
+        }
+
+        #guide div {
+            border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Choose a color</h2>
+    <div class="theme-buttons-container">
+        <button id="button1" style="background: #8e44ad;"></button>
+        <button id="button2" style="background: #2980b9;"></button>
+        <button id="button3" style="background: #f39c12;"></button>
+        <button id="button4" style="background: #27ae60;"></button>
+        <button id="button5" style="background: #ea2027;"></button>
+        <button id="button6" style="background: #e84393;"></button>
+        <button id="button7" style="background: #ff4757;"></button>
+        <button id="button8" style="background: #ffc312;"></button>
+        <button id="button9" style="background: #17c0eb;"></button>
+    </div>
+    <div>
+        <div id="guide"></div>
+        <canvas width="800" height="800" id="canvas"></canvas>
+    </div>
+    <div>
+        <label for="toggleGuide">Show Guide: </label>
+        <input type="checkbox" id="toggleGuide" checked>
+    </div>
+    <div>
+        <button type="button" id="clearButton">Clear</button>
+    </div>
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>
